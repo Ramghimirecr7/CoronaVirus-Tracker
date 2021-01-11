@@ -1,5 +1,4 @@
 package com.example.CoronavirusTracker.service;
-
 import ch.qos.logback.core.net.SyslogOutputStream;
 import com.example.CoronavirusTracker.model.LocationFacts;
 import org.apache.commons.csv.CSVFormat;
@@ -46,9 +45,9 @@ public class CoronavirusDataService {
             locationFacts.setCountry(record.get("Country/Region"));
             locationFacts.setLatestConfirmedCases(Integer.parseInt(record.get(record.size()-1)));
 
-            int latestCases = Integer.parseInt(record.get(record.size()-1));
-            int pastCases = Integer.parseInt(record.get(record.size()-2));
-            int newCases = latestCases-pastCases;
+            int latestCasesofCovid = Integer.parseInt(record.get(record.size()-1));
+            int pastCasesofCovid = Integer.parseInt(record.get(record.size()-2));
+            int newCasesofCovid = latestCases-pastCases;
 
             locationFacts.setNewCasesYesterday(newCases);
             newLocation.add(locationFacts);
