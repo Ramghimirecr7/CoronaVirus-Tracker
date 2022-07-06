@@ -47,9 +47,9 @@ public class CoronavirusDataService {
 
             int latestCasesofCovid = Integer.parseInt(record.get(record.size()-1));
             int pastCasesofCovid = Integer.parseInt(record.get(record.size()-2));
-            int newCasesofCovid = latestCases-pastCases;
+            int newCasesofCovid = latestCasesofCovid-pastCasesofCovid;
 
-            locationFacts.setNewCasesYesterday(newCases);
+            locationFacts.setNewCasesYesterday(newCasesofCovid);
             newLocation.add(locationFacts);
         }
         this.location=newLocation;
