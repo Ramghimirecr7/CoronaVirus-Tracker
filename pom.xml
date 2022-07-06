@@ -16,7 +16,9 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<exec.mainClass>com.example.CoronavirusTracker</exec.mainClass>
 	</properties>
+
 
 	<dependencies>
 		<dependency>
