@@ -1,5 +1,10 @@
 package com.example.CoronavirusTracker.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class LocationFacts {
     private String state;
     private String country;
@@ -14,37 +19,5 @@ public class LocationFacts {
                 ", LatestConfirmedCases=" + LatestConfirmedCases +
                 ", newCasesYesterday=" + newCasesYesterday +
                 '}';
-    }
-
-    public int getNewCasesYesterday() {
-        return newCasesYesterday;
-    }
-
-    public void setNewCasesYesterday(int newCasesYesterday) {
-        this.newCasesYesterday = newCasesYesterday;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public int getLatestConfirmedCases() {
-        return LatestConfirmedCases;
-    }
-
-    public void setLatestConfirmedCases(int latestConfirmedCases) {
-        LatestConfirmedCases = latestConfirmedCases;
     }
 }
